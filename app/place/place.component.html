@@ -1,0 +1,19 @@
+
+<!-- {{PlaceData|json}} -->
+<div class="row container-fluid justify-content-center">
+    <div class="card col-sm-3 shadow-lg m-1" id="card" *ngFor="let elm of PlaceData.tourist">
+        <div class="bg-image hover-overlay" mdbRipple rippleColor="light" >
+          <img src={{elm.images}} class="img-fluid"/>
+          <a>
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{elm.name}}</h5>
+          <a href={{elm.location}}>
+            <button type="button" class="btn btn-outline-danger mx-2"><mat-icon> location_on</mat-icon></button>
+          </a>
+          <a class="btn btn-primary" (click)="OpenPlaceDetails(elm)">Explore for More</a>
+        </div>
+      </div>
+</div>

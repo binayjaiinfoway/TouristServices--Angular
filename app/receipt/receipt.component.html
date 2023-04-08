@@ -1,0 +1,30 @@
+<div class="container-fluid row justify-content-center" id="receipt" #receipt>
+    <div class="col-sm-5 border rounded-5 shadow-lg p-5 row" >
+        <h2 class="text-center text-success">Entry Ticket</h2>
+        <h3 class="text-center text-info">SairSapata welcomes you at {{Place.name}}</h3>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th scope="row">Date:</th>
+                    <td>{{Visitor.Date}}</td>
+                    <th scope="row">Venue:</th>
+                    <td>{{Place.name}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Name:</th>
+                    <td>{{Visitor.Name}}</td>
+                    <th scope="row">Email:</th>
+                    <td>{{Visitor.Email}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Adult:</th>
+                    <td>{{Visitor.Adult}}</td>
+                    <th scope="row">Child:</th>
+                    <td>{{Visitor.Child}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-primary btn-sm row mt-2" (click)="MakePDF()">Download Ticket</button>
+        <button type="button" class="btn btn-warning btn-sm row mt-2" (click)="BackToHome()">Go Back</button>
+    </div>
+</div>

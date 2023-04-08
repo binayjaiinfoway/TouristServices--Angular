@@ -1,0 +1,52 @@
+<!-- <p>payment works!</p>
+{{PlaceData|json}}
+<hr>
+{{VisitorsData|json}} -->
+
+<div class="container-fluid row justify-content-center mb-5">
+<div class="col-sm-8 border rounded shadow-lg">
+    <h2 class="text-center text-info">Payment</h2>
+    <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">Name:</th>
+            <td>{{VisitorsData.Name}}</td>
+            <th scope="row">Email:</th>
+            <td>{{VisitorsData.Email}}</td>
+            </tr>
+            <tr>
+            <th scope="row">Adult:</th>
+            <td>{{VisitorsData.Adult}}</td>
+            <th scope="row">Child:</th>
+            <td>{{VisitorsData.Child}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Date:</th>
+            <td>{{VisitorsData.Date}}</td>
+          </tr>
+          <tr>
+            <th>Ticket Price:</th>
+            <td>{{VisitorsData.Child}} Child X ₹50 = ₹{{PriceForChild}}</td>
+            <td>{{VisitorsData.Adult}} Adult X ₹50 = ₹{{PriceForAdult}}</td>
+          </tr>
+          <tr>
+          <th>Total Payable Amount:</th>
+          <td>₹{{TotalAmt}}</td>
+          </tr>
+          <tr>
+            <th>Enter your UPI Id:</th>
+            <td>
+                <input class="form-control form-control-sm" type="text" type="text">
+            </td>
+            <td>
+                <button type="button" class="btn btn-success btn-sm mx-5" (click)="PrintReceipt()">Pay Now</button>
+            </td>
+            <td>
+                <button type="cancel" class="btn btn-warning btn-sm mx-5" (click)="BackToCard()">Cancel</button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+{{userData|json}}
+</div>
+</div>
